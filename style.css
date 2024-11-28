@@ -169,16 +169,9 @@ nav ul li:active {
   nav {
     width: 97vw;
   }
-  #hamburger {
-    display: inline-block;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 2rem;
-  }
-  html {
-    font-size: 55%;
-  }
+#hamburger {
+  display: inline-block;
+}
 }
 
 /* Hero Section */
