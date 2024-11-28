@@ -22,12 +22,13 @@
 }
 body {
   background-color: var(--var-background);
+  overflow-x: hidden;
 }
 
 /* Navbar */
 
 nav {
-  width: 100%;
+  width: 99vw;
   height: 100px;
   position: fixed;
   display: flex;
@@ -165,6 +166,9 @@ nav ul li:active {
 /* Handphone */
 
 @media (max-width: 450px) {
+  nav {
+    width: 97vw;
+  }
   html {
     font-size: 55%;
   }
@@ -487,7 +491,7 @@ main .main p {
   cursor: pointer;
   scale: 1.025;
   transform: skewY(2deg);
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
 }
 .panel:active {
   scale: 1;
