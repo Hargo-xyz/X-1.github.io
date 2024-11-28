@@ -1,0 +1,596 @@
+:root {
+  --var-ungu: #6a42c2;
+  --var-abu: #1c1f2b;
+  --var-ham: #f6d6d6;
+  --var-background: white;
+  --var-navbar: #6a42c24d;
+  --var-text: black;
+  --var-tema: #e8e9ed;
+  --var-primary: #3a435d;
+}
+.darkmode {
+  --var-background: #1c1f2b;
+  --var-text: white;
+  --nav-ham: #e2bfd9;
+  --var-tema: #101425;
+  --var-primary: #3a435d;
+}
+* {
+  /* padding: 0;
+  margin: 0; */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background-color: var(--var-background);
+}
+
+/* Navbar */
+
+nav {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px -40px 50px;
+  z-index: 3;
+}
+nav .profil {
+  display: flex;
+  align-items: center;
+}
+nav .profil img {
+  width: 4rem;
+  border-radius: 50%;
+  margin: 2rem;
+  filter: grayscale(100%);
+}
+nav .profil img:hover {
+  cursor: pointer;
+  filter: grayscale(0%);
+}
+nav .profil h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--var-text);
+}
+nav .profil h2 span {
+  color: #bf2ef0;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  margin: 2rem;
+}
+nav ul li a {
+  color: var(--var-text);
+  text-decoration: none;
+  font-size: large;
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #6b42c200;
+  transition: all;
+  transition: 0.3s;
+}
+nav ul li a:hover {
+  color: var(--var-ham);
+  border-bottom: 1px solid var(--var-ham);
+}
+nav ul li:active {
+  scale: 0.9;
+  transition: 0.1s;
+}
+.hamburger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hamburger #theme-switch {
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--var-tema);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2rem;
+  transition: all;
+  transition-duration: 0.3s;
+}
+.hamburger #theme-switch:hover {
+  cursor: pointer;
+  background-color: #adb0b9;
+}
+.hamburger #theme-switch:active {
+  scale: 0.8;
+}
+.hamburger #theme-switch svg {
+  fill: var(--var-primary);
+}
+.hamburger #theme-switch svg:last-child {
+  display: none;
+}
+.darkmode #themer-switch svg:first-child {
+  display: none;
+}
+.darkmode #theme-switchi svg:last-child {
+  display: block;
+}
+#hamburger {
+  display: none;
+  width: 2rem;
+  font-size: large;
+  font-weight: 700;
+}
+#hamburger:hover {
+  cursor: pointer;
+  color: var(--var-ham);
+}
+#hamburger:active {
+  scale: 0.9;
+}
+/* Tablet */
+
+@media (max-width: 758px) {
+  html {
+    font-size: 62.5%;
+  }
+  #hamburger {
+    display: inline-block;
+    width: 5rem;
+  }
+  nav .navbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: var(--var-navbar);
+    height: 100vh;
+    transition: 0.5s;
+  }
+  nav .navbar.active {
+    right: 0;
+  }
+  nav .navbar ul {
+    filter: none;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+}
+/* Handphone */
+
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+/* Hero Section */
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--var-text);
+}
+main .main h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 3rem;
+}
+main .main p {
+  margin: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.custom-shape-divider-top-1732670176 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  z-index: -2;
+}
+
+.custom-shape-divider-top-1732670176 svg {
+  position: relative;
+  display: block;
+  width: calc(145% + 1.3px);
+  height: 373px;
+}
+
+.custom-shape-divider-top-1732670176 .shape-fill {
+  fill: #8b5dff;
+}
+
+/* About Wali Kelas */
+.section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.section .foto h2 {
+  text-align: center;
+  background-color: var(--var-ungu);
+  color: white;
+  border-radius: 10rem;
+}
+.section .foto img {
+  width: 15rem;
+  margin: 2rem 3rem;
+  filter: grayscale(100%);
+}
+.section .foto img:hover {
+  cursor: pointer;
+  filter: grayscale(0%);
+}
+.section .isi {
+  background-color: var(--var-abu);
+  border-radius: 1rem;
+  height: 15rem;
+  color: white;
+  position: relative;
+}
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.section .isi::after,
+.section .isi::before {
+  --angle: 0deg;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(
+    from var(--angle),
+    transparent 25%,
+    #6a42c2,
+    blue,
+    #6a42c2
+  );
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 1rem;
+  animation: 3s spin linear infinite;
+}
+.section .isi::before {
+  filter: blur(1.5rem);
+  opacity: 0.9;
+}
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+.section .isi h2 {
+  text-align: center;
+  margin: 2rem;
+}
+.section .isi p {
+  margin: 0rem 1rem;
+}
+
+/* Struktur Kelas */
+.bungkus {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  align-items: center;
+  color: var(--var-text);
+}
+.tree {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+.tree ul {
+  padding: 20px;
+  list-style: none;
+  position: relative;
+  transition: 0.1s;
+}
+.tree li {
+  display: inline-table;
+  position: relative;
+  padding: 10px;
+  transition: 0.1s;
+}
+.tree li::before,
+.tree li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-top: 2px solid #ccc;
+  width: 51%;
+  height: 10px;
+}
+.tree li::after {
+  left: 0;
+  right: 50%;
+  border-left: 2px solid #ccc;
+}
+.tree li:only-child:after,
+.tree li:only-child:before {
+  display: none;
+}
+.tree li:only-child {
+  padding-top: 0;
+}
+.tree li:first-child:after,
+.tree li:last-child:before {
+  border: 0 none;
+}
+.tree li:last-child:before,
+.tree li:first-child:before {
+  border-left: 2px solid #ccc;
+  border-radius: 0px 5px 0px 0px;
+}
+.tree li:last-child::after {
+  border-left: 0px solid #ccc;
+  border-radius: 5px 0px 0px 0px;
+}
+.tree ul ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 2px solid #ccc;
+  width: 0;
+  height: 20px;
+}
+.tree a {
+  border: 2px solid #ccc;
+  color: var(--var-text);
+  padding: 10px;
+  display: inline-grid;
+  border-radius: 5px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.tree a img {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-bottom: 10px !important;
+  border-radius: 100px;
+  margin: auto;
+}
+.tree a span {
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  color: var(--var-text);
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.tree li a:hover,
+.tree li a:hover img,
+.tree li a:hover span,
+.tree li a:hover + ul li a {
+  background-color: var(--var-navbar);
+  color: var(--var-texxt);
+  border: 2px solid var(--var-navbar);
+  box-shadow: 0px 0px 8px -5px #5f5f5f;
+}
+.tree li a:hover + ul li:after,
+.tree li a:hover + ul li:before,
+.tree li a:hover + ul ul:before {
+  border-color: var(--var-navbar);
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+  .tree ul li ul .sek::before,
+  .tree ul li ul li .ben::after {
+    border-top: 0px;
+  }
+}
+/* HP */
+@media (max-width: 758px) {
+  .tree ul li ul li ul li::after,
+  .tree ul li ul li ul li::before {
+    border: 0px;
+  }
+  .tree li::before,
+  .tree li::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    width: 51%;
+    height: 2rem;
+  }
+  .tree li:last-child:before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    width: 51%;
+    height: 10px;
+  }
+}
+
+/* Pembeda */
+.beda {
+  height: 28rem;
+}
+
+/* Foto */
+.body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(45deg, #49a09d, #6a42c2, #49a09d, #bf2ef0);
+  background-size: 900% 200% ;
+  animation: animate 20s linear infinite;
+}
+.kontener {
+  display: flex;
+  width: 90vw;
+}
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 2rem;
+  color: #fff;
+  flex: 0.5;
+  margin: 8px;
+  position: relative;
+  transition: all 0.4s ease-in;
+  filter: grayscale(0%);
+}
+.panel h1 {
+  font-size: 2.2rem;
+  position: absolute;
+  bottom: 1.2rem;
+  left: 1.2rem;
+  margin: 0;
+  opacity: 0;
+}
+.panel.active {
+  flex: 5;
+}
+.panel.active h1{
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+.panel:hover{
+  cursor: pointer;
+  scale: 1.025;
+  transform: skewY(2deg);
+  filter: grayscale(100%);
+}
+.panel:active {
+  scale: 1;
+  transform: skewY(0deg);
+}  
+/* Foto @ */
+@media (max-width: 480px) {
+  .kontener {
+    width: 100vw;
+    transition: opacity 0.3s ease-in 0.4s;
+  }
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
+@media (min-width:1000px) {
+  .beda {
+    height: 1rem;
+  }
+}
+@keyframes animate {
+  0% {
+   background-position: 0% 50%;
+  }
+  50% {
+background-position: 100% 50%;
+  }
+  0% {
+background-position: 0% 50%;
+  }
+}
+
+/* Jadwal */
+
+.jadwal {
+  height: 100vh;
+  display: block;
+}
+.jadwal h2 {
+  color: var(--var-text);
+  text-align: center;
+  padding-top: 7rem;
+  padding-bottom: 1rem;
+  font-size: 3rem;
+}
+.jadwal h2 span {
+  color: #bf2ef0;
+}
+.jadwal details {
+  padding: 1rem ;
+  margin: 1rem auto;
+  border: 2px solid var(--var-text);
+  border-radius: 4px;
+  max-width: 400px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.2s ease-in;
+}
+.jadwal details summary {
+  color: var(--var-text);
+}
+.jadwal details summary ol {
+  color: var(--var-text);
+}
+.jadwal details ol li {
+color: var(--var-text);
+}
+.jadwal details:hover{
+  cursor: pointer;
+  border-color: #8b5dff;
+  scale: 1.025;
+}
+.jadwal details:active {
+  scale: 1;
+}
+
+/* Footer */
+footer{
+  height: 7rem;
+  background-color: #6a42c2;
+}
+footer .foot ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+footer .foot ul li{
+  margin: 0.9rem 2rem;
+  font-size: 1.4rem;
+}
+footer .foot ul li a{
+  text-decoration: none;
+  color: var(--var-text);
+}
+footer .foot p{
+  text-align: center;
+  font-weight: 400;
+  color: var(--var-text)
+}
+footer .foot ul li a:hover{
+  color: var(--var-ham);
+  scale: 1.1;
+}
+footer .foot ul li a:active {
+  scale: 1;
+}
