@@ -169,6 +169,9 @@ nav ul li:active {
   nav {
     width: 97vw;
   }
+  #hamburger {
+    display: inline-block;
+  }
   html {
     font-size: 55%;
   }
