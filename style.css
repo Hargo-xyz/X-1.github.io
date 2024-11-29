@@ -177,8 +177,13 @@ nav ul li:active {
   nav {
     width: 97vw;
   }
+  nav .navbar {
+    display: none;
+  }
 #hamburger {
   display: inline-block;
+  font-size: large;
+  font-weight: 700;
 }
 }
 
