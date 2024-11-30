@@ -171,15 +171,15 @@ nav ul li:active {
 /* Handphone */
 
 @media (max-width: 450px) {
-  * {
+  /* * {
     max-width: 100vw;
-  }
+  } */
   nav {
     width: 97vw;
   }
-  nav .navbar {
-    display: none;
-  }
+  /* nav .navbar {
+    display: none; */
+  /* } */
 #hamburger {
   display: inline-block;
   font-size: large;
